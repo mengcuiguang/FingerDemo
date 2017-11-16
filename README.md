@@ -9,12 +9,14 @@
 
 1、判断当前设备的SDK版本
     因为设备指纹是在android6.0以后才出来的，所以我们首先要判断一下SDK版本是否>=23
+    
 	if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
 	    大于22
 	}
 
 2、判断当前设备是否支持指纹
     指纹识别肯定要求设备上有指纹识别的硬件，判断起来也简单
+    
          public static boolean isHardWareDetected(Context context) {
 		return FingerprintManagerCompat.from(context).isHardwareDetected();
 	}
@@ -22,11 +24,13 @@
 3、判断当前设备是否有图案锁
     这个有的一聊，Android在设置指纹时，G爹要求必须要有图案锁 ，可以是password，PIN或者图案都行
     google原生的逻辑就是：想要使用指纹识别的话，必须首先使能屏幕锁才行  
+    
     public static boolean isKeyguardSecure(Context context) {
         return ((KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE)).isKeyguardSecure();
     }
 
 4、判断是否设置过指纹
+
     public static boolean hasEnrolledFingerPrint(Context context) {
         return FingerprintManagerCompat.from(context).hasEnrolledFingerprints();
     }	
