@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.meng.fingerdemo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_main_finger_sdk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前API版本" />
+
+    <Button
+        android:id="@+id/btn_main_finger_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否有图案锁" />
+    <Button
+        android:id="@+id/btn_main_finger_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否支持指纹" />
+
+    <Button
+        android:id="@+id/btn_main_finger_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否设置指纹" />
+
+    <Button
+        android:id="@+id/btn_main_finger_veri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证指纹" />
+</LinearLayout>
